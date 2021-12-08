@@ -11,26 +11,50 @@ Each test is a dict with
 TESTS = {
     "Basics": [
         {
-            "input": [3, 2],
-            "answer": 5,
-            "explanation": "3+2=?"
+            "input": ["name"],
+            "answer": "name",
         },
         {
-            "input": [5, 7],
-            "answer": 12,
-            "explanation": "5+7=?"
-        }
+            "input": ["name#"],
+            "answer": "nam",
+        },
+        {
+            "input": ["na##me"],
+            "answer": "me",
+        },
+        {
+            "input": ["nam#e#"],
+            "answer": "na",
+        },
+        {
+            "input": ["##name"],
+            "answer": "name",
+        },
+        {
+            "input": ["name######"],
+            "answer": "",
+        },
+        {
+            "input": ["nam######e"],
+            "answer": "e",
+        },
+        {
+            "input": ["n###ame"],
+            "answer": "ame",
+        },
+        {
+            "input": ["thna#m##e"],
+            "answer": "the",
+        },
+        {
+            "input": ["oppo##r##t##u###nity"],
+            "answer": "nity",
+        },
     ],
     "Extra": [
         {
-            "input": [6, 3],
-            "answer": 9,
-            "explanation": "6+3=?"
+            "input": ["if you #had o##n##e## shot#### o#r one opp#o##r###tunity"],
+            "answer": "if youh  r onetunity",
         },
-        {
-            "input": [6, 7],
-            "answer": 13,
-            "explanation": "6+7=?"
-        }
     ]
 }

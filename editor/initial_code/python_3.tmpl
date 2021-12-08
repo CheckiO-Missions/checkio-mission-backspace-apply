@@ -2,22 +2,22 @@
 {% block env %}{% endblock env %}
 
 {% block start %}
-def sum_two(a: int, b: int) -> int:
+def backspace_apply(val: str) -> str:
     # your code here
-    return None
+    return val
 {% endblock start %}
 
 {% block example %}
 print('Example:')
-print(mult_two(1, 2))
+print(backspace_apply("thna#m##e"))
 {% endblock %}
 
 {% block tests %}
 {% for t in tests %}
-assert {% block call %}mult_two({{t.input.0|p}}, {{t.input.1|p}})
+assert {% block call %}backspace_apply({{t.input.0|p}})
 {% endblock %} == {% block result %}{{t.answer|p}}{% endblock %}{% endfor %}
 {% endblock %}
 
 {% block final %}
-print("The first mission is done! Click 'Check' to earn cool rewards!")
+print("Not bad! Click 'Check' to earn cool rewards!")
 {% endblock final %}
